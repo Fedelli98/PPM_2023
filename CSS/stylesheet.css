@@ -561,6 +561,15 @@ div{
     line-height: 1.4285714286;
     margin-top: 4px;
 }
+
+.main-notice_video_link{
+    display: flex;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #163860;
+    text-decoration: none;
+}
 .news-middle_title_link:after{
     color: #ecb62f;
     content: "∬";
