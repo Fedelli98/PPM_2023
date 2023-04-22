@@ -14,7 +14,7 @@ div{
     margin: 0;
 }
 .wrapper{
-    display: flex;
+    display: block;
 }
 .content-body {
     position: relative;
@@ -711,8 +711,6 @@ div{
 .footer{
     position: relative;
     top: 173px;
-    max-height: 396px;
-    height: 396px;
     width: 100%;
     background-color: #163860;
     font-family: noto-serif,Georgia,Verdana,Times,Times New Roman,Garamond,Palatino,serif;;
@@ -730,6 +728,7 @@ div{
 
 .footer-sections{
     padding: 32px 0;
+    max-height: 100%;
     display: flex;
     flex-direction: row;
 }
@@ -799,15 +798,12 @@ div{
 
 .footer_list{
     list-style: none;
+    padding: 10px 0 10px 32px;
 }
-.arrow_list{
+.arrow_list {
     content: "\27A4";
     filter: invert(100%);
 }
-
-
-
-
 
 
 
@@ -870,6 +866,11 @@ div{
         max-width: 50% !important;
         margin-top: 4px;
     }
+
+    .footer-sections{
+        /*padding: 0;*/
+    }
+
     .footer-second_section_wrapper{
         display: flex;
         flex-direction: column;
