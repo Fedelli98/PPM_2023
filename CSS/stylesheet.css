@@ -1038,6 +1038,17 @@ div{
         margin-top: 4px;
     }
 
+    .video-list-container ul{
+        flex-direction: column;
+    }
+    .video-list-container li{
+        margin: 12px;
+        flex-direction: row;
+        align-items: center;
+    }
+    .video-list-container img{
+        max-width: 35%;
+    }
     .content-secondary{
         max-width: 1000px;
     }
