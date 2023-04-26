@@ -137,7 +137,6 @@ div{
     align-items: center;
     flex-direction: row;
     font-size: 11px;
-    width: 120px;
     font-family: source-sans-pro, sans-serif;
 }
 
@@ -1001,7 +1000,7 @@ div{
         visibility: visible;
         display: flex;
     }
-    .disappear {
+    .disappear-1024 {
         display: none;
     }
 
@@ -1131,6 +1130,9 @@ div{
 
 @media screen and (max-width: 768px){
 
+    .disappear-768{
+        display: none;
+    }
     .adv-container{
         display: none;
     }
