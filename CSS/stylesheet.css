@@ -23,6 +23,7 @@ div{
     margin: 0 auto;
     max-width: 1920px;
     width: 100%;
+    background-image: url("../images/general_background.jpg");
 }
 .content-body a:link,
 .content-body a:visited{
@@ -37,16 +38,17 @@ div{
     visibility: hidden;
 }
 
-.container{
+.navbar-container{
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: 1;
+    z-index: 999;
     height: 173px;
     width: 100%;
+    background-color: white;
 }
-.container a:link,
-.container a:visited{
+.navbar-container a:link,
+.navbar-container a:visited{
     text-decoration: none;
     font-family: Arial, sans-serif;
     color: white;
@@ -317,6 +319,7 @@ div{
     padding: 15px;
     display: flex;
     flex-direction: column;
+    background-color: #cccccc;
 }
 
 .adv-top{
@@ -357,12 +360,13 @@ div{
     padding-top: 5px;
 }
 
-.content{
+.content-main{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 1280px;
     padding: 32px 24px;
     margin: 0 auto;
+    background-color: white;
     color: #163860;
 }
 
@@ -393,7 +397,7 @@ div{
 }
 
 .news-radio{
-    padding: 16px 12px !important;
+    padding: 16px 12px;
     margin: 5px !important;
     border-radius: 8px;
     box-shadow: rgb(250, 251, 255) 0px -1px 10px, rgba(166, 171, 189, 0.7) 0px 1px 5px;
@@ -714,6 +718,90 @@ div{
     color: #163860;
 }
 
+.content-secondary{
+    display: block;
+    max-width: 1280px;
+    padding: 32px 24px;
+    margin: 0 auto;
+    background-color: white;
+    color: #163860;
+}
+
+.video-wrapper {
+    position: relative;
+    border: 12px solid #d3e7ff;
+    width: 100%;
+}
+.video-wrapper:before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    z-index: 0;
+    bottom: -16px;
+    left: 96px;
+    top: -16px;
+    width: 264px;
+}
+
+.video-wrapper_container{
+    position: relative;
+    margin: 48px;
+    display: block;
+    z-index: 1;
+}
+
+.video-wrapper_title{
+    width: 100%;
+    margin-bottom: 24px;
+    font-family: noto-serif,Georgia,Verdana,Times,Times New Roman,Garamond,Palatino,serif !important;
+    font-size: 2rem;
+    line-height: 1.3333333333;
+    font-weight: 700;
+}
+.video-wrapper_title a{
+    font-family: initial;
+    font-size: 1rem;
+    float: right;
+    margin-top: 16px;
+}
+
+.video-list-container{
+    width: 100%;
+    margin-top: 24px;
+}
+.video-list-container ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.video-list-container li{
+    width: 100%;
+    margin-right: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 25%;
+}
+.video-list-container a{
+    width: 100%;
+    margin-right: 24px;
+    display: inline-block;
+    flex: 1 1 25%;
+}
+.video-list-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.video-list-container li:last-child{
+    margin-right: 0;
+}
+
+
+
+
+
+
+/*  FOOTER  */
 .footer{
     position: relative;
     top: 173px;
@@ -905,7 +993,7 @@ div{
         position: relative;
     }
 
-    .content{
+    .content-main{
         max-width: 1000px;
     }
 
@@ -951,6 +1039,13 @@ div{
         margin-top: 4px;
     }
 
+    .main-column{
+        flex-basis: inherit;
+        min-width: inherit;
+    }
+
+
+                                        /*      START FOOTER SECTION     */
     .footer_first_section{
         padding-left: 0;
     }
@@ -992,6 +1087,8 @@ div{
     .footer-fourth_section{
         padding-left: 8px;
     }
+
+                                                /*      END FOOTER SECTION     */
 }
 
 @media screen and (max-width: 1024px){
@@ -1004,7 +1101,7 @@ div{
         display: none;
     }
 
-    .container{
+    .navbar-container{
         height: 96px;
         align-content: center;
     }
@@ -1086,7 +1183,7 @@ div{
         height: initial;
     }
 
-    .content{
+    .content-main{
         justify-content: center;
         max-width: 768px;
         padding: 32px
@@ -1136,7 +1233,7 @@ div{
     .adv-container{
         display: none;
     }
-    .content{
+    .content-main{
         padding: 0;
     }
 
