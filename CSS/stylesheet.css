@@ -730,7 +730,6 @@ div{
 .video-wrapper {
     position: relative;
     border: 12px solid #d3e7ff;
-    width: 100%;
 }
 .video-wrapper:before {
     content: "";
@@ -1039,6 +1038,10 @@ div{
         margin-top: 4px;
     }
 
+    .content-secondary{
+        max-width: 1000px;
+    }
+
     .main-column{
         flex-basis: inherit;
         min-width: inherit;
@@ -1221,6 +1224,11 @@ div{
         width: 1px;
         margin: 0 3px;
         background-color: grey;
+    }
+
+    .content-secondary{
+        max-width: 768px;
+        padding: 24px 32px
     }
 
 }
