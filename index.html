@@ -353,42 +353,42 @@
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">1:00</time>
+                                <time class="scrollbar_items_time">01:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">2:00</time>
+                                <time class="scrollbar_items_time">02:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">3:00</time>
+                                <time class="scrollbar_items_time">03:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">4:00</time>
+                                <time class="scrollbar_items_time">04:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">5:00</time>
+                                <time class="scrollbar_items_time">05:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">6:00</time>
+                                <time class="scrollbar_items_time">06:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">7:00</time>
+                                <time class="scrollbar_items_time">07:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                             <div class="scrollbar_items">
-                                <time class="scrollbar_items_time">8:00</time>
+                                <time class="scrollbar_items_time">08:00</time>
                                 <a class="scrollbar_items_content">
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
@@ -413,6 +413,41 @@
                                     «Je ne méprise personne et je dis toujours la vérité aux Français», réitère Emmanuel Macron</a>
                             </div>
                         </div>
+                    </div>
+                    <div class="sticky_element">
+                        <img src="images/scroll-adv.jfif" style="width: 100%">
+                        <script>
+                            // selezionare l'elemento sticky e il contenitore principale
+                            const stickyElement = document.querySelector('.sticky_element');
+                            const containerElement = document.querySelector('.right-column-content');
+                            const otherElement = document.querySelector('.news-right');
+                            const navbar = document.querySelector('.navbar-container')
+
+                            const otherElementHeight = otherElement.offsetHeight; // altezza della scrollbar
+                            const otherElementOffset = otherElement.offsetTop; // offset dall'inizio della scrollbar
+
+                            const initialStickyOffset = stickyElement.offsetTop;// calcolo la posizione iniziale dell'elemento sticky
+
+                            // calcolare la posizione massima dell'elemento sticky nella pagina
+                            const maxStickyOffset = containerElement.offsetTop + containerElement.offsetHeight - stickyElement.offsetHeight;
+
+                            // calcolare la posizione corrente dell'altro elemento
+                            const otherElementPosition = otherElementOffset - window.scrollY;
+
+                            // verificare se l'altro elemento è visibile
+                            if (otherElementPosition <= window.innerHeight && otherElementPosition >= -otherElementHeight) {
+                                // impostare il valore di top dell'elemento sticky in modo da bloccarlo alla posizione dell'altro elemento
+                                stickyElement.style.top = navbar + 'px';
+
+                                // assicurarsi che l'elemento sticky non superi la sua posizione massima
+                                if (stickyElement.offsetTop > maxStickyOffset) {
+                                    stickyElement.style.top = maxStickyOffset + 'px';
+                                }
+                            } else {
+                                // ripristinare la posizione iniziale dell'elemento sticky
+                                stickyElement.style.top = initialStickyOffset + 'px';
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
