@@ -787,7 +787,7 @@ div{
 }
 .video-list-container a{
     width: 100%;
-    margin-right: 24px;
+    margin: 0 50px;
     display: inline-block;
     flex: 1 1 25%;
 }
@@ -1016,6 +1016,13 @@ div{
 
 .footer_bottom{
     /*classe che serve solo per modificare il primo e l'ultimo elemento elemento della lista che dovrà contenere*/
+    position: relative;
+}
+.footer_bottom:before{
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 1px solid #476486;
 }
 
 .footer_bottom ul{
@@ -1112,7 +1119,7 @@ div{
         align-items: center;
     }
     .video-list-container img{
-        max-width: 35%;
+        max-width: 25%;
     }
     .content-secondary{
         max-width: 1000px;
