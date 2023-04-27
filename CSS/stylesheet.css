@@ -735,6 +735,7 @@ div{
 .video-wrapper {
     position: relative;
     border: 12px solid #d3e7ff;
+    margin-bottom: 24px;
 }
 .video-wrapper:before {
     content: "";
